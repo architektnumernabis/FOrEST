@@ -1,0 +1,77 @@
+/*RESET*/
+@import './reset.scss';
+
+/*COLORS*/
+@import './colors.scss';
+
+/*COMMON CLASSES*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*NAVIGATION MOBILE*/
+
+/*NAVIGATION DESKTOP*/
+.navigation-desktop {
+    display: none;
+}
+
+/*HEADER*/
+.header {
+    position: relative;
+    height: 100vh;
+
+    &__text {
+        position: absolute;
+        color: $white;
+        z-index: 100;
+        bottom: 0;
+    }
+
+    &__carousel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slider {
+        width: 100%;
+        height: 100%;
+
+        section {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 1s;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+            &:nth-child(1) {
+                opacity: 1;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+/*ABOUT US*/
+.about-us {
+    height: 100vh;
+}
+
+
+/*BREAKPOINTS*/
+@import './medium';
