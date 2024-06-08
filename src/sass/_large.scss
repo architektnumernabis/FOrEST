@@ -1,0 +1,30 @@
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+
+
+
+    /*NAVIGATION*/
+    .navigation {
+        &__logo {
+            top: 20px;
+            left: 40px;
+        }
+
+        &__btn {
+            top: 20px;
+            right: 40px;
+        }
+    }
+
+     /*HEADER*/
+     .header {
+        &__heading {
+           font-size: 12rem;
+        }
+
+        &__description {
+            font-size: 1.6rem;
+        }
+    }
+}

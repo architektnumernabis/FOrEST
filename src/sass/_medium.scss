@@ -1,44 +1,15 @@
 @media (min-width: 576px) {
 
-    /*NAVIGATION MOBILE*/
-    .navigation-mobile {
-        display: none;
-    }
-
-    /*NAVIGATION DESKTOP*/
-    .navigation-desktop {
-        position: fixed;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        background-color: $shadow-low;
-        backdrop-filter: blur(10px);
-        z-index: 1000;
-
-        &__logo {
-            width: 100px;
-
-            img {
-                width: 70px;
-            }
+    /*HEADER*/
+    .header {
+        &__heading {
+           font-size: 8rem;
         }
 
-        &__box {
-            display: flex;
-
-            ul {
-                display: flex;
-            }
-
-            a {
-                padding: 20px;
-                font-size: 1.3em;
-                line-height: 25px;
-                color: $white;
-                text-decoration: none;
-
-            }
+        &__description {
+            font-size: 1.6rem;
         }
     }
-
 }
+
+@media (min-width: 768px) {}
