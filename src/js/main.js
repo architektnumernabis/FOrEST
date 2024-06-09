@@ -32,9 +32,13 @@ const handleNav = () => {
     nav.classList.toggle('navigation__items--active')
     //navBars.style.backgroundColor = 'white' //skończyć ten temat
 
+    document.body.classList.toggle('prevent-scrolling')
+    
+
     allNavItems.forEach(item => {
         item.addEventListener('click', () => {
             nav.classList.remove('navigation__items--active')
+            document.body.classList.remove('prevent-scrolling')
         })
     })
 

@@ -14,6 +14,27 @@
             font-size: 1.4rem;
         }
     }
+
+    /*MAIN*/
+
+    /*ABOUT US*/
+    .about-us {
+        &__box {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__text {
+            text-align: left;
+            width: 55%;
+        }
+
+        &__img {
+            width: 40%;
+            margin-bottom: 0;
+            max-height: 300px;
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -30,8 +51,18 @@
             font-size: 10rem;
         }
 
-        &__description {
+        &__text {
             font-size: 2rem;
         }
     }
+
+    /*MAIN*/
+
+    /*ABOUT US*/
+    .about-us {
+        &__text {
+            font-size: 2rem;
+        }
+    }
+
 }

@@ -10,7 +10,7 @@
 /*COMPONENTS*/
 @import './components';
 
-/*ANIMATIONS*/ 
+/*ANIMATIONS*/
 @import './animations';
 
 
@@ -24,14 +24,8 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-.shadow {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, .3);
-    z-index: 50;
+.prevent-scrolling {
+    overflow-y: hidden;
 }
 
 .whitebars {
@@ -235,9 +229,33 @@ body {
     }
 }
 
+/*MAIN*/
+
 /*ABOUT US*/
 .about-us {
-    height: 100vh;
+    background-image: linear-gradient(0deg, $white, rgba(255, 255, 255, 0.68), $white), url('../img/logoKora.png');
+    background-size: cover;
+    background-position: center;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0;
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    &__title {
+        margin-bottom: 0.5em;
+        font-size: 1.8rem;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+    }
 }
 
 
