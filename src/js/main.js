@@ -1,5 +1,11 @@
 const slider = document.querySelector('.header__slider')
+const nav = document.querySelector('.navigation__items')
+const navBtn = document.querySelector('.navigation__btn')
+const navBars = document.querySelector('.navigation__bars')
+const allNavItems = document.querySelectorAll('.navigation__item')
 
+
+//FUNCTION FOR SLIDER IN HEADER
 let sectionIndex = 0
 
 function reset() {
@@ -20,3 +26,32 @@ function startShow() {
 }
 
 startShow()
+
+//FUNCTION FOR OPENING NAVIGATION
+const handleNav = () => {
+    nav.classList.toggle('navigation__items--active')
+    //navBars.style.backgroundColor = 'white' //skończyć ten temat
+
+    allNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            nav.classList.remove('navigation__items--active')
+        })
+    })
+
+    hanldeNavItemsAnimation();
+}
+
+//FUNCTION FOR ANIMATION IN NAVIGATION
+const hanldeNavItemsAnimation = () => {
+    let delayTime = 0;
+
+    allNavItems.forEach(item => {
+        {
+            item.classList.toggle('nav-items-animation')
+            item.style.animationDelay = '.' + delayTime + 's';
+            delayTime++;
+        }
+    })
+}
+
+navBtn.addEventListener('click', handleNav)

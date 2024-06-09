@@ -3,13 +3,35 @@
     /*HEADER*/
     .header {
         &__heading {
-           font-size: 8rem;
+            font-size: 8rem;
         }
 
         &__description {
             font-size: 1.6rem;
         }
+
+        &__btn {
+            font-size: 1.4rem;
+        }
     }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    /*COMMON CLASSES*/
+    .white-block {
+        height: 50px;
+        width: 45%;
+    }
+
+    /*HEADER*/
+    .header {
+        &__heading {
+            font-size: 10rem;
+        }
+
+        &__description {
+            font-size: 2rem;
+        }
+    }
+}

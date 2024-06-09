@@ -1,8 +1,8 @@
-@mixin burgerBtn {
+@mixin btnStyle {
     position: absolute;
     right: 0;
     height: 3px;
     content: '';
-    background-color: $second-main;
+    background-color: $main;
     transition: width .3s;
 }
