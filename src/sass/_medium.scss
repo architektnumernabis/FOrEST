@@ -35,6 +35,25 @@
             max-height: 300px;
         }
     }
+
+    /*WHY-US?*/
+    .why-us {
+        &__items {
+            grid-template-rows: repeat(1, 1fr);
+        }
+
+        &__item {
+            padding: 1em;
+
+            i {
+                font-size: 4rem;
+            }
+
+            &:nth-child(2) {
+                grid-row: 1/2;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -62,6 +81,28 @@
     .about-us {
         &__text {
             font-size: 2rem;
+        }
+    }
+
+    /*WHY US?*/
+    .why-us {
+        padding: 30em 2em;
+        @include heroImage('../img/whyus-big.jpeg');
+
+        &__items {
+            font-size: 2rem;
+            justify-items: center;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        &__item {
+            max-width: 150px;
+        }
+
+        hr {
+            margin: 0 auto;
+            width: 70%;
         }
     }
 

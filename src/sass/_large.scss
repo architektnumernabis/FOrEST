@@ -11,9 +11,10 @@
 
     /*ABOUT US*/
     .about-us {
-        &__box{
+        &__box {
             margin: 5em 0;
         }
+
         &__text {
             display: flex;
             flex-direction: column;
@@ -27,6 +28,28 @@
 
         &__description {
             font-size: 1.8rem;
+        }
+    }
+
+    /*WHY US?*/
+    .why-us {
+        &__heading {
+            font-size: 7.2rem;
+        }
+
+        &__item {
+            i {
+                font-size: 6rem;
+            }
+        }
+
+        &__text {
+            font-size: 1.8rem;
+        }
+
+        hr {
+            width: 60%;
+            max-width: 900px;
         }
     }
 }

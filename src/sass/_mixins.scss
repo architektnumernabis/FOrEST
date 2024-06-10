@@ -6,3 +6,10 @@
     background-color: $main;
     transition: width .3s;
 }
+
+@mixin heroImage($bgImg) {
+    background-image: $green-gradient-transparent, url($bgImg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
