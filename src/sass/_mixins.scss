@@ -8,7 +8,7 @@
 }
 
 @mixin heroImage($bgImg) {
-    background-image: $green-gradient-transparent, url($bgImg);
+    background-image: $main-gradient-transparent, url($bgImg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

@@ -113,7 +113,7 @@ body {
         transform: translateX(100%);
         height: 100vh;
         width: 100%;
-        background-image: $green-gradient;
+        background-image: $main-gradient;
         transition: transform .5s cubic-bezier(0.65, 0.05, 0.36, 1);
         z-index: 100;
 
@@ -152,7 +152,7 @@ body {
 /*HEADER*/
 .header {
     position: relative;
-    height: 100vh;
+    height: 95vh;
 
     &__text {
         position: absolute;
@@ -299,6 +299,109 @@ body {
     &__text {
         margin-top: 5px;
         font-size: 1.4rem;
+    }
+}
+
+/*CABINS*/
+.cabins {
+    background-image: linear-gradient(0deg, $white, rgba(255, 255, 255, 0.68), $white), url('../img/cabins_background.jpeg');
+
+    &__card {
+        position: relative;
+        margin: 6em 0;
+        height: 450px;
+        color: $white;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            animation: removeOverflow 1s forwards;
+
+            .cabins__card-info {
+                z-index: 100;
+                opacity: 1;
+                animation: showData 0.5s forwards;
+                transition: opacity 1s;
+            }
+        }
+
+        &:not(:hover) {
+            animation: showOverflow 1s forwards;
+
+            .cabins__card-info {
+                animation: removeData 0.5s forwards;
+            }
+        }
+
+        &-img {
+            position: relative;
+            padding: 2em;
+            height: 100%;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+
+            i {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 4rem;
+                color: $white;
+                bottom: 10px;
+                animation: pulse 1s linear infinite;
+            }
+
+            &--first {
+                background-image: $green-gradient-transparent, url('../img/cabin01small.jpg');
+            }
+
+            &--second {
+                background-image: $blue-gradient-transparent, url('../img/cabin02small.jpeg');
+            }
+        }
+
+        &-info {
+            display: block;
+            position: absolute;
+            transform: translateY(3rem);
+            bottom: 0rem;
+            left: 0;
+            right: 0;
+            width: 90%;
+            padding: 2em;
+            margin-inline: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px $shadow-low;
+            background-color: $white;
+            color: $black;
+            opacity: 0;
+            transition: transform, opacity 1s 1s;
+        }
+
+        &-location {
+            font-size: 1.4rem;
+            color: $grey;
+        }
+
+        &-title {
+            font-size: 2rem;
+            margin: 0.5em;
+        }
+
+        &-button {
+            text-decoration: none;
+            font-size: 1.4rem;
+            padding: 0.5em;
+
+            &--first {
+                color: $second-main-darker;
+            }
+
+            &--second {
+                color: $main;
+            }
+        }
     }
 }
 

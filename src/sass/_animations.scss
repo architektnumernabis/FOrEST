@@ -11,3 +11,73 @@
 .nav-items-animation {
     animation: navItemsAnimation 1s both;
 }
+
+@keyframes pulse {
+    // 0% {
+    //     font-size: 4rem;
+    // }
+
+    // 25% {
+    //     font-size: 4.1rem;
+    // }
+
+    // 50% {
+    //     font-size: 4.2rem;
+    // }
+
+    // 75% {
+    //     font-size: 4.1rem;
+    // }
+
+    // 100% {
+    //     font-size: 4rem;
+    // }
+}
+
+@keyframes showData {
+    50% {
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        transform: translateY(3rem);
+    }
+}
+
+@keyframes removeData {
+    0% {
+        transform: translateY(3rem);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-1rem);
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+}
+
+@keyframes removeOverflow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes showOverflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+
+    50% {
+        overflow: hidden;
+    }
+}

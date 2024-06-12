@@ -3,7 +3,7 @@
     /*NAVIGATION*/
     .navigation {
         &__item {
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
     }
 
@@ -33,9 +33,6 @@
 
     /*WHY US?*/
     .why-us {
-        &__heading {
-            font-size: 7.2rem;
-        }
 
         &__item {
             i {
@@ -51,6 +48,26 @@
             width: 60%;
             max-width: 900px;
         }
+    }
+
+    /*CABINS*/
+    .cabins {
+        // &__cards {
+        //     &-location {
+        //         font-size: 1.8rem;
+        //     }
+
+        //     &-title {
+        //         font-size: 2.4rem;
+        //         margin: 1em;
+        //     }
+
+        //     &-button {
+
+        //         font-size: 1.8rem;
+
+        //     }
+        // }
     }
 }
 
@@ -81,6 +98,13 @@
 
         &__btn {
             font-size: 1.6rem;
+        }
+    }
+
+    /*CABINS*/
+    .cabins {
+        &__card {
+            width: 35%;
         }
     }
 }

@@ -1,11 +1,17 @@
 $white: white;
 $black: black;
-$main: #1DD3B0;
-$second-main: #AFFC41;
-$shadow-low: rgba(0, 0, 0, .3);
+$grey: grey;
+$main: rgb(29, 211, 176);
+$second-main: rgb(175, 252, 65);
+$second-main-darker: rgb(130, 187, 49);
+$shadow-low: rgba(0, 0, 0, .5);
 
-$green-gradient:linear-gradient(319deg, #1DD3B0 0%, #1DD3B0 37%, #AFFC41 100%);
-$green-gradient-transparent: linear-gradient(319deg, rgba(29, 211, 176, 0.5) 0%, rgba(29, 211, 176, 0.5) 37%, rgba(175, 252, 65, 0.5) 100%);
+$main-gradient:linear-gradient(319deg, #1DD3B0 0%, #1DD3B0 37%, #AFFC41 100%);
+$main-gradient-transparent: linear-gradient(319deg, rgba(29, 211, 176, 0.5) 0%, rgba(29, 211, 176, 0.5) 37%, rgba(175, 252, 65, 0.5) 100%);
+
+
+$green-gradient-transparent: linear-gradient(319deg, rgba(175, 252, 65, 0.5) 0%, rgba(175, 252, 65, 0.5) 37%, rgba(175, 252, 65, 0.5) 100%);
+$blue-gradient-transparent: linear-gradient(319deg, rgba(29, 211, 176, 0.5) 0%, rgba(29, 211, 176, 0.5) 37%, rgba(29, 211, 176, 0.5) 100%);
 
 
 //#dbf26e
