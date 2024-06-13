@@ -39,7 +39,7 @@ body {
     justify-content: space-between;
     height: 100px;
     width: 100%;
-    z-index: 1000;
+    z-index: 100000;
 
     &__logo {
         position: absolute;
@@ -343,13 +343,9 @@ body {
             background-position: center;
 
             i {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
                 font-size: 4rem;
                 color: $white;
-                bottom: 10px;
-                animation: pulse 1s linear infinite;
+                animation: wave 2s linear infinite;
             }
 
             &--first {
@@ -394,12 +390,82 @@ body {
             font-size: 1.4rem;
             padding: 0.5em;
 
+            &:hover {
+                font-size: 1.6rem;
+            }
+
             &--first {
                 color: $second-main-darker;
             }
 
             &--second {
                 color: $main;
+            }
+        }
+    }
+}
+
+/*OFFERS*/
+.offers {
+    position: relative;
+    @include heroImage('../img/whyus-small.jpeg');
+    overflow: hidden;
+
+    .section-heading {
+        color: $white;
+    }
+
+    &__option {
+        margin: 1em 0;
+        box-shadow: 5px 5px 10px $shadow-low;
+        background-color: $white;
+        overflow: hidden;
+
+        &-img {
+            width: 100%;
+            transition: transform .3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        &-info {
+            padding: 2em;
+            background-color: $white;
+            z-index: 10;
+        }
+
+        &-heading {
+            margin-bottom: 0.5em;
+            font-size: 2.4rem;
+            font-weight: 300;
+        }
+
+        &-text {
+            margin-bottom: 0.5em;
+            font-size: 1.3rem;
+            color: $grey;
+        }
+
+        &-btn {
+            margin-top: 1em;
+            padding: 0.8em;
+            width: 100%;
+            color: $black;
+            background-color: $white;
+            border: 2px solid $main;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: color .2s;
+            letter-spacing: 0.5px;
+
+            &:hover {
+                color: $white;
+            }
+
+            &::before {
+                background-color: $main;
             }
         }
     }

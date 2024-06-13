@@ -50,24 +50,21 @@
         }
     }
 
-    /*CABINS*/
-    .cabins {
-        // &__cards {
-        //     &-location {
-        //         font-size: 1.8rem;
-        //     }
+    /*OFFERS*/
+    .offers {
+        background-image: $main-gradient-transparent, url('../img/whyus-big.jpeg');
 
-        //     &-title {
-        //         font-size: 2.4rem;
-        //         margin: 1em;
-        //     }
+        &__option {
 
-        //     &-button {
+            &-img {
+                object-fit: cover;
+            }
 
-        //         font-size: 1.8rem;
+            &-text {
+                font-size: 1.5rem;
+            }
+        }
 
-        //     }
-        // }
     }
 }
 
