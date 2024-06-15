@@ -471,6 +471,53 @@ body {
     }
 }
 
+/*REVIEWS*/
+.reviews {
+    background-image: linear-gradient(0deg, $white, rgba(255, 255, 255, 0.68), $white), url('../img/logoKora.png');
+    background-size: cover;
+    background-position: center;
+
+    &__box {
+        position: relative;
+        margin: 2em;
+        padding: 2em;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        background-color: $white;
+        box-shadow: 3px 3px 10px $shadow-low;
+        transition: transform .3s;
+
+        &:hover {
+            transform: scale(0.95);
+        }
+    }
+
+    &__box-img {
+        position: absolute;
+        left: 75%;
+        transform: translate(-50%, -50%);
+
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &__box-quote {
+        margin-bottom: 1em;
+        font-size: 3rem;
+        color: $main;
+    }
+
+    &__box-text {
+        margin-bottom: 1em;
+        font-size: 1.4rem;
+        color: $grey;
+    }
+}
+
 /*BREAKPOINTS*/
 @import './medium';
 @import './large';
