@@ -518,6 +518,66 @@ body {
     }
 }
 
+/*CONTACT*/
+.contact {
+    position: relative;
+    background-color: $light-grey;
+    overflow: hidden;
+
+    .white-block-left {
+        background-color: $black;
+    }
+
+    &__form,
+    &__form-top {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__form-label {
+        margin-bottom: 0.5em;
+        text-transform: uppercase;
+    }
+
+    &__form-input {
+        @include contactForm;
+    }
+
+    &__form-textarea {
+        @include contactForm;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 150px;
+    }
+
+    &__form-btn {
+        align-self: flex-end;
+        padding: 1em;
+        width: 100%;
+        max-width: 300px;
+        color: $black;
+        background-color: $white;
+        border: 2px solid $main;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: color .2s;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            color: $white;
+        }
+
+        &::before {
+            background-color: $main;
+        }
+
+    }
+}
+
+
+
+
 /*BREAKPOINTS*/
 @import './medium';
 @import './large';
