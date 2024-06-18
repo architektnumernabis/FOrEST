@@ -3,6 +3,8 @@ const nav = document.querySelector('.navigation__items')
 const navBtn = document.querySelector('.navigation__btn')
 const navBars = document.querySelector('.navigation__bars')
 const allNavItems = document.querySelectorAll('.navigation__item')
+const allSections = document.querySelectorAll('.section')
+const footerYear = document.querySelector('.footer__year')
 
 
 //FUNCTION FOR SLIDER IN HEADER
@@ -33,7 +35,7 @@ const handleNav = () => {
     //navBars.style.backgroundColor = 'white' //skończyć ten temat
 
     document.body.classList.toggle('prevent-scrolling')
-    
+
 
     allNavItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -58,4 +60,25 @@ const hanldeNavItemsAnimation = () => {
     })
 }
 
-navBtn.addEventListener('click', handleNav)
+//FUNCTION FOR CHANGING BUTTON BARS COLOR
+const sectionObserver = () => {
+    const currentSection = window.scrollY;
+
+    allSections.forEach(section => {
+        if (section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+            navBars.classList.add('main-bars')
+        } else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 60) {
+            navBars.classList.remove('main-bars')
+        }
+    })
+}
+
+//FUNCTION FOR HANDLING FOOTER YEAR
+const handleFooterYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year;
+}
+
+handleFooterYear();
+navBtn.addEventListener('click', handleNav);
+window.addEventListener('scroll', sectionObserver);
