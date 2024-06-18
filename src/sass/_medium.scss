@@ -108,7 +108,30 @@
                 padding: 1em;
             }
         }
+    }
 
+    /*CONTACT*/
+    .contact {
+
+        &__box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4em;
+
+            i {
+                padding: 0.5em 0.5em 0.5em 0;
+            }
+        }
+
+        &__box-phone,
+        &__box-booking {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__box-booking {
+            padding: 0;
+        }
     }
 }
 
@@ -142,7 +165,7 @@
 
     /*WHY US?*/
     .why-us {
-        padding: 30em 2em;
+        padding: 20em 2em;
         @include heroImage('../img/whyus-big.jpeg');
 
         &__items {
@@ -182,6 +205,18 @@
                 &--second {
                     background-image: $blue-gradient-transparent, url('../img/slider02.jpg');
                 }
+            }
+        }
+    }
+
+    /*CONTACT*/
+    .contact {
+
+        &__box {
+            font-size: 1.5rem;
+
+            i {
+                font-size: 4em;
             }
         }
     }

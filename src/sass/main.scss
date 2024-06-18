@@ -41,17 +41,6 @@ body {
     width: 100%;
     z-index: 100000;
 
-    &__logo {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        cursor: pointer;
-
-        img {
-            width: 70px;
-        }
-    }
-
     &__btn {
         position: absolute;
         top: 20px;
@@ -526,6 +515,38 @@ body {
 
     .white-block-left {
         background-color: $black;
+    }
+
+    &__box {
+        margin-bottom: 3em;
+        font-size: 1.4rem;
+        font-weight: bold;
+
+        i {
+            padding: 0.5em;
+            font-size: 3.6rem;
+            color: $main;
+        }
+    }
+
+    &__box-phone,
+    &__box-booking {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        text-align: center;
+        color: $black;
+        transition: transform .3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+    }
+
+    &__box-booking {
+        padding: 2em 0;
     }
 
     &__form,

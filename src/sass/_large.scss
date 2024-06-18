@@ -105,3 +105,18 @@
         }
     }
 }
+
+@media (min-width: 1400px) {
+
+    /*CONTACT*/
+    .contact {
+
+        &__box {
+
+            .fa-bookmark {
+                order: 1;
+                padding: 0.5em 0 0.5em 0.5em;
+            }
+        }
+    }
+}
