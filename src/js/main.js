@@ -44,6 +44,10 @@ const handleNav = () => {
         })
     })
 
+    if (nav.classList.contains('navigation__items--active')) {
+        navBars.classList.remove('main-bars')
+    }
+
     hanldeNavItemsAnimation();
 }
 
