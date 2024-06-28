@@ -12,7 +12,7 @@
     /*ABOUT US*/
     .about-us {
         &__box {
-            margin: 5em 0;
+            margin: 7em 0;
         }
 
         &__text {
@@ -66,6 +66,25 @@
         }
 
     }
+
+    /*CONTACT*/
+    .contact {
+        &__box {
+            .fa-at {
+                padding-bottom: 0.3em;
+            }
+        }
+
+        &__box-phone,
+        &__box-booking {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__box-booking {
+            flex-direction: row-reverse;
+        }
+    }
 }
 
 @media (min-width: 1200px) {
@@ -98,6 +117,13 @@
         }
     }
 
+    /*HEADER SUBSITES*/
+    .header-subsite {
+        &__btn {
+            font-size: 4rem;
+        }
+    }
+
     /*CABINS*/
     .cabins {
         &__card {
@@ -113,9 +139,13 @@
 
         &__box {
 
+            .fa-mobile-screen-button {
+                padding-left: 0;
+            }
+
             .fa-bookmark {
-                order: 1;
-                padding: 0.5em 0 0.5em 0.5em;
+                order: -1;
+                padding-right: 0;
             }
         }
     }

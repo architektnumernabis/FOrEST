@@ -15,6 +15,13 @@
         }
     }
 
+    /*HEADER SUBSITES*/
+    .header-subsite {
+        &__btn {
+            font-size: 4rem;
+        }
+    }
+
     /*MAIN*/
 
     /*ABOUT US*/
@@ -27,18 +34,26 @@
         &__text {
             text-align: left;
             width: 55%;
+
+            &--right {
+                text-align: right;
+            }
         }
 
         &__img {
             width: 40%;
             margin-bottom: 0;
             max-height: 300px;
+
+            &--right {
+                order: 1;
+            }
         }
     }
 
     /*WHY-US?*/
     .why-us {
-        @include heroImage('../img/whyus-medium.jpeg');
+        @include heroImage($main-gradient-transparent, '../img/whyus-medium.jpeg');
 
         &__items {
             grid-template-rows: 1fr;
@@ -126,19 +141,28 @@
     .contact {
 
         &__box {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 4em;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
 
-            i {
-                padding: 0.5em 0.5em 0.5em 0;
-            }
+            // i {
+            //     padding: 0.5em 0.5em 0.5em 0;
+            // }
         }
 
-        &__box-phone,
+        &__box-phone {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
         &__box-booking {
-            display: flex;
-            flex-direction: row;
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+
+        &__box-mail {
+            grid-column: 2/3;
+            grid-row: 2/3;
         }
 
         &__box-booking {
@@ -166,6 +190,17 @@
         }
     }
 
+    /*HEADER GREEN HOUSE*/
+    .header-green {
+        @include heroImage($green-gradient-transparent, '../img/slider01.jpg');
+    }
+
+    /*HEADER BLUE HOUSE*/
+    .header-blue {
+        @include heroImage($blue-gradient-transparent, '../img/slider02.jpg');
+        background-position: 0 -200px;
+    }
+
     /*MAIN*/
 
     /*ABOUT US*/
@@ -178,7 +213,7 @@
     /*WHY US?*/
     .why-us {
         padding: 20em 2em;
-        @include heroImage('../img/whyus-big.jpeg');
+        @include heroImage($main-gradient-transparent, '../img/whyus-big.jpeg');
 
         &__items {
             font-size: 2rem;
@@ -233,10 +268,17 @@
     .contact {
         &__box {
             font-size: 1.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 1fr);
 
             i {
                 font-size: 4em;
             }
+        }
+
+        &__box-mail {
+            grid-column: 2/3;
+            grid-row: 1/2;
         }
     }
 

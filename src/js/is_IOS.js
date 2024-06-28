@@ -16,4 +16,5 @@ function iOS() {
 if (iOS() == true) {
   document.getElementById("why-us").style.backgroundAttachment = "scroll";
   document.getElementById("offers").style.backgroundAttachment = "scroll";
+  document.getElementById("header-subsite").style.backgroundAttachment = "scroll";
 }

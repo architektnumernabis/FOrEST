@@ -157,6 +157,52 @@ body {
     position: relative;
     height: 95vh;
 
+    span {
+        display: inline-block;
+        animation: heading-animation 0.3s linear forwards;
+        opacity: 0;
+
+        &:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        &:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        &:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        &:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        &:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        &:nth-child(10) {
+            animation-delay: 1s;
+        }
+    }
+
     &__text {
         position: absolute;
         height: 100%;
@@ -174,7 +220,12 @@ body {
         font-family: "Dancing Script", cursive;
         font-size: 5.8rem;
         font-weight: bold;
+    }
 
+    &__description,
+    &__btn {
+        opacity: 0;
+        animation: slideIn 1s 0.9s forwards;
     }
 
     &__description {
@@ -232,13 +283,42 @@ body {
     }
 }
 
+/*HEADER SUBSITES*/
+.header-subsite {
+    position: relative;
+    height: 70vh;
+
+    &__heading {
+        text-shadow: 5px 5px $shadow-low;
+    }
+
+    &__btn {
+        opacity: 1;
+        position: absolute;
+        bottom: 40px;
+        background-color: transparent;
+        color: $white;
+        font-size: 3rem;
+        transition: transform;
+        animation: bounce 1s infinite;
+    }
+}
+
+/*HEADER GREEN HOUSE*/
+.header-green {
+    @include heroImage($green-gradient-transparent, '../img/cabin02small.jpeg');
+}
+
+/*HEADER BLUE HOUSE*/
+.header-blue {
+    @include heroImage($blue-gradient-transparent, '../img/cabin01small.jpg');
+}
+
 /*MAIN*/
 
 /*ABOUT US*/
 .about-us {
-    background-image: linear-gradient(0deg, $white, rgba(255, 255, 255, 0.68), $white), url('../img/logoKora.png');
-    background-size: cover;
-    background-position: center;
+    @include backgroundLogo;
 
     &__box {
         display: flex;
@@ -265,7 +345,7 @@ body {
 .why-us {
     position: relative;
     padding: 10em 2em;
-    @include heroImage('../img/whyus-small.jpeg');
+    @include heroImage($main-gradient-transparent, '../img/whyus-small.jpeg');
     text-align: center;
     color: $white;
     overflow: hidden;
@@ -275,7 +355,6 @@ body {
     }
 
     &__items {
-        //padding: 1em 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -417,7 +496,7 @@ body {
 /*OFFERS*/
 .offers {
     position: relative;
-    @include heroImage('../img/whyus-small.jpeg');
+    @include heroImage($main-gradient-transparent, '../img/whyus-small.jpeg');
     overflow: hidden;
 
     .section-heading {
@@ -482,9 +561,7 @@ body {
 
 /*REVIEWS*/
 .reviews {
-    background-image: linear-gradient(0deg, $white, rgba(255, 255, 255, 0.68), $white), url('../img/logoKora.png');
-    background-size: cover;
-    background-position: center;
+    @include backgroundLogo;
 
     &__box {
         position: relative;
@@ -538,7 +615,7 @@ body {
     }
 
     &__box {
-        margin-bottom: 3em;
+        margin-bottom: 6em;
         font-size: 1.4rem;
         font-weight: bold;
 
@@ -550,7 +627,8 @@ body {
     }
 
     &__box-phone,
-    &__box-booking {
+    &__box-booking,
+    &__box-mail {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -615,6 +693,16 @@ body {
     }
 }
 
+/*MAIN FOR SUBSITES*/
+.green-house {
+    @include backgroundLogo;
+    position: relative;
+
+    .white-block-left {
+        background-color: $black;
+    }
+}
+
 /*FOOTER*/
 .footer {
     color: $white;
@@ -639,13 +727,35 @@ body {
     }
 
     &__box-social {
-        margin: 2em 0 1em;
+        margin: 2em 0;
 
         a {
             &:nth-child(2) {
                 &:hover {
                     color: $second-main;
                 }
+            }
+        }
+    }
+
+    &__box-statue {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            .statue-text {
+                color: $main;
+            }
+        }
+
+        .statue-text {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $white;
+            transition: color .3s;
+
+            &:hover {
+                color: $main;
             }
         }
     }

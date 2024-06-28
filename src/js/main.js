@@ -7,27 +7,6 @@ const allSections = document.querySelectorAll('.section')
 const footerYear = document.querySelector('.footer__year')
 
 
-//FUNCTION FOR SLIDER IN HEADER
-let sectionIndex = 0
-
-function reset() {
-    for (let i = 0; i < slider.children.length; i++) {
-        slider.children[i].style.opacity = 0
-        slider.children[i].style.zIndex = 0
-    }
-}
-
-function startShow() {
-    setInterval(function () {
-        reset()
-        sectionIndex = sectionIndex < 1 ? sectionIndex + 1 : 0
-        slider.children[sectionIndex].style.opacity = 1
-        slider.children[sectionIndex].style.zIndex = 1
-
-    }, 2000)
-}
-
-startShow()
 
 //FUNCTION FOR OPENING NAVIGATION
 const handleNav = () => {
