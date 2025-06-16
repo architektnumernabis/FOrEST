@@ -323,12 +323,13 @@ body {
     &__box {
         display: flex;
         flex-direction: column;
-        margin: 2em 0;
+        margin: 5em 0;
     }
 
     &__img {
         width: 100%;
         margin-bottom: 1em;
+        object-fit: cover;
     }
 
     &__title {
@@ -345,7 +346,7 @@ body {
 .why-us {
     position: relative;
     padding: 10em 2em;
-    @include heroImage($main-gradient-transparent, '../img/whyus-small.jpeg');
+    @include heroImage($main-gradient-transparent, '../img/whyus-small.jpg');
     text-align: center;
     color: $white;
     overflow: hidden;

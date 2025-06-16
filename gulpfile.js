@@ -11,6 +11,7 @@ const clean = require('gulp-clean');
 const kit = require('gulp-kit');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
+const plumber = require('gulp-plumber');
 
 const paths = {
     html: './html/**/*.kit',
@@ -46,12 +47,38 @@ function javaScript(done) {
     done()
 }
 
+/*
 function convertImages(done) {
     src(paths.img)
         .pipe(imagemin())
         .pipe(dest(paths.imgDest));
     done()
+} 
+
+*/ 
+function convertImages(done) {
+    src(paths.img)
+        .pipe(plumber({
+            errorHandler: function (err) {
+                console.error('Image compression error:', err.message);
+                this.emit('end');
+            }
+        }))
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: false },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(dest(paths.imgDest));
+    done();
 }
+
 
 function handleKits(done) {
     src(paths.html)

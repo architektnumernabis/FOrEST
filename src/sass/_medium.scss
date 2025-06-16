@@ -43,7 +43,7 @@
         &__img {
             width: 40%;
             margin-bottom: 0;
-            max-height: 300px;
+            max-height: 400px;
 
             &--right {
                 order: 1;
@@ -53,7 +53,7 @@
 
     /*WHY-US?*/
     .why-us {
-        @include heroImage($main-gradient-transparent, '../img/whyus-medium.jpeg');
+        @include heroImage($main-gradient-transparent, '../img/whyus-medium.jpg');
 
         &__items {
             grid-template-rows: 1fr;
@@ -213,7 +213,7 @@
     /*WHY US?*/
     .why-us {
         padding: 20em 2em;
-        @include heroImage($main-gradient-transparent, '../img/whyus-big.jpeg');
+        @include heroImage($main-gradient-transparent, '../img/whyus-big.jpg');
 
         &__items {
             font-size: 2rem;

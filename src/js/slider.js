@@ -13,7 +13,7 @@ function reset() {
 function startShow() {
     setInterval(function () {
         reset()
-        sectionIndex = sectionIndex < 1 ? sectionIndex + 1 : 0
+        sectionIndex = (sectionIndex + 1) % slider.children.length
         slider.children[sectionIndex].style.opacity = 1
         slider.children[sectionIndex].style.zIndex = 1
 
