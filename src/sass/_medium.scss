@@ -3,15 +3,15 @@
     /*HEADER*/
     .header {
         &__heading {
-            font-size: 8rem;
+            font-size: 9rem;
         }
 
         &__description {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
         }
 
         &__btn {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
         }
     }
 
@@ -128,7 +128,7 @@
 
             &-heading {
                 margin-bottom: 0.5em;
-                font-size: 3.6rem;
+                font-size: 3.8rem;
             }
 
             &-btn {
@@ -205,8 +205,13 @@
 
     /*ABOUT US*/
     .about-us {
-        &__text {
-            font-size: 2rem;
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__description {
+            font-size: 1.8rem;
         }
     }
 
@@ -264,6 +269,15 @@
         }
     }
 
+    /*OFFERS*/
+    .offers {
+        &__option {
+            &-text {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
     /*CONTACT*/
     .contact {
         &__box {
@@ -296,6 +310,7 @@
         &__box {
             margin: 2em;
             width: 25%;
+            font-size: 1.8rem;
 
             &:first-child {
                 width: 50%;
@@ -303,7 +318,7 @@
         }
 
         &__box-title {
-            font-size: 2.4rem;
+            font-size: 2.6rem;
         }
 
         &__box-list {

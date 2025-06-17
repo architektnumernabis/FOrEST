@@ -105,11 +105,11 @@
     /*HEADER*/
     .header {
         &__heading {
-            font-size: 14rem;
+            font-size: 16rem;
         }
 
         &__description {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
         }
 
         &__btn {
@@ -124,10 +124,32 @@
         }
     }
 
+    /*ABOUT US*/
+    .about-us {
+
+        &__title {
+            font-size: 4rem;
+        }
+
+        &__description {
+            font-size: 2rem;
+        }
+    }
+
+
     /*CABINS*/
     .cabins {
         &__card {
             width: 35%;
+        }
+    }
+
+    /*OFFERS*/
+    .offers {
+        &__option {
+            &-text {
+                font-size: 2rem;
+            }
         }
     }
 }
