@@ -337,14 +337,29 @@
                     color: $main;
                 }
             }
+
+            &:nth-child(1):hover a {
+                color: $main;
+            }
+
+            &:nth-child(2):hover a {
+                color: $second-main;
+            }
         }
     }
 }
+
 
 @media (max-width: 787px) {
 
     /*REVIEWS*/
     .reviews.section-padding {
         padding: 6em 0;
+    }
+}
+
+@media (min-width: 838px) {
+    .br-mobile {
+        display: none;
     }
 }

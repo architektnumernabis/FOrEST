@@ -221,6 +221,10 @@ body {
         &:nth-child(15) {
             animation-delay: 1.5s;
         }
+
+        &:nth-child(16) {
+            animation-delay: 1.6s;
+        }
     }
 
     &__text {
@@ -241,6 +245,7 @@ body {
         font-family: "Kaushan Script", cursive;
         font-size: 6.5rem;
         font-weight: bold;
+        text-align: center;
     }
 
     &__description,
