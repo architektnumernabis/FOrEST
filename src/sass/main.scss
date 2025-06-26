@@ -340,6 +340,10 @@ body {
     @include heroImage($blue-gradient-transparent, '../img/cabin01small.jpg');
 }
 
+.header-offersOne {
+    @include heroImage($blue-gradient-transparent, '../img/offers01big.jpg');
+}
+
 /*MAIN*/
 
 /*ABOUT US*/
@@ -540,6 +544,11 @@ body {
         background-color: $white;
         overflow: hidden;
 
+        a {
+            text-decoration: none;
+            color: $black;
+        }
+
         &-img {
             width: 100%;
             transition: transform .3s;
@@ -581,6 +590,11 @@ body {
 
             &:hover {
                 color: $white;
+
+                a {
+                    color: $white;
+                    transition: color .2s;
+                }
             }
 
             &::before {
