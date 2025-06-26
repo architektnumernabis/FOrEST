@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spływy kajakowe</title>
+    <title>Akwedukt w Fojutowie</title>
     <link rel="icon" type="image/x-icon" href="dist/img/logo-mini.svg">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +37,21 @@
 <body>
 
     <!-- NAVIGATION DESKTOP -->
-    <!-- @include 'nav-desktop.kit' -->
-
+    <nav class="navigation">
+    <button class="navigation__btn">
+        <div class="navigation__box">
+            <div class="navigation__bars"></div>
+        </div>
+    </button>
+    <div class="navigation__items">
+        <a href="index.html#about-us" class="navigation__item">o nas</a>
+        <a href="index.html#cabins" class="navigation__item">domki</a>
+        <a href="index.html#offers" class="navigation__item">atrakcje</a>
+        <a href="gallery.html" class="navigation__item">galeria</a>
+        <a href="index.html#reviews" class="navigation__item">dlaczego warto do nas przyjechać?</a>
+        <a href="index.html#contact" class="navigation__item">kontakt</a>
+    </div>
+</nav>
     <!--HEADER-->
     <header id="header-subsite" class="header header-subsite header-offersOne section">
         <div class="header__text header-subsite__text">
@@ -90,8 +103,47 @@
     </main>
 
     <!--FOOTER-->
-    <!-- @include 'footer.kit'-->
+    <footer class="footer">
+    <div class="wrapper">
+        <div class="footer__boxes">
+            <div class="footer__box">
+                <h3 class="footer__box-title">
+                    Fo<span class='green-letter'>r</span><span class='light-green-letter'>e</span>st</h3>
+                <p>Sprawdź naszego Instagrama, Facebooka oraz Booking, klikając w jeden z poniższych linków! </p>
+                <div class="footer__box-social">
+                    <a href="https://www.instagram.com/" class="footer__box-link" target="blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/" class="footer__box-link" target="blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.booking.com/index.pl.html?label=gen173nr-1BCAEoggI46AdIM1gEaLYBiAEBmAEeuAEHyAEM2AEB6AEBiAIBqAIDuAL8xPqzBsACAdICJDIyY2EyYzNhLTZjODMtNDBiMy05MDcwLTIxZmNmZDQzZDNjNdgCBeACAQ&sid=e31ae2a963e054b9545af101646c907b&aid=304142" class="footer__box-link" target="blank"><i class="fa-regular fa-bookmark"></i></a>
+                </div>
+                <div class="footer__box-statue">
+                    <a href="../exapmle.pdf" class="footer__box-link" target="blank"> <i class="fa-solid fa-file-pdf "></i></a>
+                    <a href="../exapmle.pdf" target="blank" class="statue-text">Regulamin</a>
+                </div>
+            </div>
 
+            <div class="footer__box footer__box-desktop">
+                <h3 class="footer__box-title">Domki</h3>
+                <ul class="footer__box-list">
+                    <li class="footer__box-list-item"><a href="green.html">Leśny Zakątek</a></li>
+                    <li class="footer__box-list-item"><a href="blue.html">Rzeczna Przystań</a></li>
+                </ul>
+            </div>
+            <div class="footer__box footer__box-desktop">
+                <h3 class="footer__box-title">Menu</h3>
+                <ul class="footer__box-list">
+                    <li class="footer__box-list-item"><a href="index.html#about-us">O nas</a></li>
+                    <li class="footer__box-list-item"><a href="index.html#cabins">Domki</a></li>
+                    <li class="footer__box-list-item"><a href="index.html#offers">Atrakcje</a></li>
+                    <li class="footer__box-list-item"><a href="gallery.html">Galeria</a></li>
+                    <li class="footer__box-list-item"><a href="index.html#reviews">Opinie</a></li>
+                    <li class="footer__box-list-item"><a href="index.html#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="footer__bottom-text">created by Maciej Pawlica &copy; <span class="footer__year"></span></p>
+</footer>
     <!--MY SCRIPTS-->
     <script src="dist/js/main.min.js"></script>
     <script src="dist/js/is_IOS.min.js"></script>

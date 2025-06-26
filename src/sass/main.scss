@@ -344,6 +344,10 @@ body {
     @include heroImage($blue-gradient-transparent, '../img/offers01big.jpg');
 }
 
+.header-offersTwo {
+    @include heroImage($blue-gradient-transparent, '../img/offers02big.jpg');
+}
+
 /*MAIN*/
 
 /*ABOUT US*/
@@ -472,11 +476,11 @@ body {
             }
 
             &--first {
-                background-image: $green-gradient-transparent, url('../img/cabin01small.jpg');
+                background-image: $green-gradient-transparent, url('../img/slider01.jpg');
             }
 
             &--second {
-                background-image: $blue-gradient-transparent, url('../img/cabin02small.jpeg');
+                background-image: $blue-gradient-transparent, url('../img/slider02.jpg');
             }
         }
 
@@ -577,6 +581,9 @@ body {
         }
 
         &-btn {
+            display: inline-block;
+            text-align: center;
+            font-size: 1.6rem;
             margin-top: 1em;
             padding: 0.8em;
             width: 100%;
@@ -587,6 +594,7 @@ body {
             cursor: pointer;
             transition: color .2s;
             letter-spacing: 0.5px;
+            text-transform: uppercase;
 
             &:hover {
                 color: $white;
@@ -824,6 +832,7 @@ body {
     &__bottom-text {
         padding: 2em;
         text-align: center;
+        font-size: 1.4rem;
     }
 }
 
