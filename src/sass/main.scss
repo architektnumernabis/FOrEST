@@ -225,6 +225,14 @@ body {
         &:nth-child(16) {
             animation-delay: 1.6s;
         }
+
+        &:nth-child(17) {
+            animation-delay: 1.7s;
+        }
+
+        &:nth-child(18) {
+            animation-delay: 1.8s;
+        }
     }
 
     &__text {
@@ -340,12 +348,33 @@ body {
     @include heroImage($blue-gradient-transparent, '../img/cabin01small.jpg');
 }
 
+/*HEADERS OFFERS */
 .header-offersOne {
     @include heroImage($blue-gradient-transparent, '../img/offers01big.jpg');
 }
 
 .header-offersTwo {
     @include heroImage($blue-gradient-transparent, '../img/offers02big.jpg');
+}
+
+.header-offersThree {
+    @include heroImage($blue-gradient-transparent, '../img/offers03big.jpg');
+}
+
+.header-offersFour {
+    @include heroImage($blue-gradient-transparent, '../img/offers04big.jpg');
+}
+
+.header-offersFive {
+    @include heroImage($blue-gradient-transparent, '../img/offers05big.jpg');
+}
+
+.header-offersSix {
+    @include heroImage($blue-gradient-transparent, '../img/offers06big.jpg');
+}
+
+.header-offersSeven {
+    @include heroImage($blue-gradient-transparent, '../img/offers07big.jpg');
 }
 
 /*MAIN*/
@@ -612,9 +641,24 @@ body {
     }
 }
 
+/*LOCALIZATION*/
+.localization {
+    @include backgroundLogo;
+
+    &__text {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}
+
 /*REVIEWS*/
 .reviews {
     @include backgroundLogo;
+    position: relative;
+
+    .white-block-left {
+        background-color: $black;
+    }
 
     &__box {
         position: relative;
@@ -652,8 +696,14 @@ body {
 
     &__box-text {
         margin-bottom: 1em;
-        font-size: 1.4rem;
-        color: $grey;
+        font-size: 1.8rem;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: $black;
+            font-weight: bold;
+        }
     }
 }
 
@@ -662,10 +712,6 @@ body {
     position: relative;
     background-color: $light-grey;
     overflow: hidden;
-
-    .white-block-left {
-        background-color: $black;
-    }
 
     &__box {
         margin-bottom: 6em;
