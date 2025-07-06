@@ -254,6 +254,7 @@ body {
         font-size: 6.5rem;
         font-weight: bold;
         text-align: center;
+        line-height: 1em;
     }
 
     &__description,
@@ -265,6 +266,7 @@ body {
     &__description {
         font-size: 1.6rem;
         text-align: center;
+        padding-top: 2em;
     }
 
     &__btn {
@@ -397,6 +399,8 @@ body {
 
     &__text {
         margin: 2em 0;
+        text-align: center;
+        margin: auto;
     }
 
     &__title {
@@ -505,11 +509,11 @@ body {
             }
 
             &--first {
-                background-image: $green-gradient-transparent, url('../img/slider01.jpg');
+                background-image: $green-gradient-transparent, url('../img/domek03.jpg');
             }
 
             &--second {
-                background-image: $blue-gradient-transparent, url('../img/slider02.jpg');
+                background-image: $blue-gradient-transparent, url('../img/domek04.jpeg');
             }
         }
 
@@ -644,6 +648,7 @@ body {
 /*LOCALIZATION*/
 .localization {
     @include backgroundLogo;
+    padding-top: 0;
 
     &__text {
         font-size: 1.6rem;
@@ -705,6 +710,35 @@ body {
             font-weight: bold;
         }
     }
+}
+
+/*GALLERY*/
+.gallery {
+    @include backgroundLogo;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+
+        a {
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+                transition: transform .3s, filter .8s;
+
+                &:hover {
+                    transform: scale(1.02);
+                    filter: grayscale(100%);
+                }
+            }
+        }
+
+    }
+
+
 }
 
 /*CONTACT*/

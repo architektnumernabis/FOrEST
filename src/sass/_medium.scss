@@ -32,12 +32,7 @@
         }
 
         &__text {
-            text-align: left;
             width: 55%;
-
-            &--right {
-                text-align: right;
-            }
 
             &--offers {
                 display: flex;
@@ -263,15 +258,7 @@
             margin: 1em;
             width: 45%;
 
-            &-img {
-                &--first {
-                    background-image: $green-gradient-transparent, url('../img/slider01.jpg');
-                }
 
-                &--second {
-                    background-image: $blue-gradient-transparent, url('../img/slider02.jpg');
-                }
-            }
         }
     }
 
@@ -306,6 +293,47 @@
         &__box-mail {
             grid-column: 2/3;
             grid-row: 1/2;
+        }
+    }
+
+    /*GALLERY*/
+    .gallery {
+        &__box {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 1em;
+
+            &--one {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            &--two {
+                grid-column: 2/3;
+                grid-row: 1/3;
+
+            }
+
+            &--three {
+                grid-column: 3/4;
+                grid-row: 1/2;
+
+            }
+
+            &--four {
+                grid-column: 1/2;
+                grid-row: 2/4;
+            }
+
+            &--five {
+                grid-column: 3/4;
+                grid-row: 2/4;
+            }
+
+            &--six {
+                grid-column: 2/3;
+                grid-row: 3/4;
+            }
         }
     }
 

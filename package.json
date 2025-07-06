@@ -30,5 +30,8 @@
         "imagemin-optipng": "^8.0.0",
         "imagemin-svgo": "^11.0.1",
         "sass": "^1.49.7"
+    },
+    "dependencies": {
+        "lightbox2": "^2.11.5"
     }
 }
