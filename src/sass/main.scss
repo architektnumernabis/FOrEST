@@ -731,10 +731,14 @@ body {
                 transition: transform .3s, filter .8s;
 
                 &:hover {
-                    transform: scale(1.02);
+                    transform: scale(1.01);
                     filter: grayscale(100%);
                 }
             }
+        }
+
+        &--invisible {
+            display: none;
         }
 
     }
