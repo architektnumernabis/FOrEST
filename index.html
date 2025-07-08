@@ -391,16 +391,17 @@
                         <i class="fa-solid fa-at"></i>forest.mood.05@gmail.com
                     </a>
                 </div>
-                <form class="contact__form">
+                <form class="contact__form" action="https://formsubmit.co/forest.mood.05@gmail.com" method="POST">
                     <div class="contact__form-top">
+                        <input type="hidden" name="_subject" value="Nowa wiadomość z formularza Forest Mood">
                         <label for="name" class="contact__form-label">Imię i nazwisko:</label>
-                        <input id="name" type="text" class="contact__form-input">
+                        <input id="name" type="text" class="contact__form-input" required>
                         <label for="email" class="contact__form-label">Adres e-mail:</label>
-                        <input id-='email' type="text" class="contact__form-input">
+                        <input id-='email' type="text" class="contact__form-input" required>
                     </div>
                     <label for="msg" class="contact__form-label">Wiadomość</label>
                     <textarea id="msg" class="contact__form-textarea
-                    "></textarea>
+                    " required></textarea>
                     <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
                 </form>
             </div>
