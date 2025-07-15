@@ -1,4 +1,3 @@
-//script that changes bacground-attachment to scroll on iOS devices
 function iOS() {
   return [
       'iPad Simulator',
@@ -7,14 +6,16 @@ function iOS() {
       'iPad',
       'iPhone',
       'iPod'
-    ].includes(navigator.platform)
-    // iPad on iOS 13 detection
-    ||
-    (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    ].includes(navigator.platform) ||
+    (navigator.userAgent.includes("Mac") && "ontouchend" in document);
 }
 
-if (iOS() == true) {
-  document.getElementById("why-us").style.backgroundAttachment = "scroll";
-  document.getElementById("offers").style.backgroundAttachment = "scroll";
-  document.getElementById("header-subsite").style.backgroundAttachment = "scroll";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  if (iOS()) {
+    const ids = ["why-us", "offers", "header-subsite"];
+    ids.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.backgroundAttachment = "scroll";
+    });
+  }
+});
