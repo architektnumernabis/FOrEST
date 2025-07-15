@@ -342,12 +342,12 @@ body {
 
 /*HEADER GREEN HOUSE*/
 .header-green {
-    @include heroImage($green-gradient-transparent, '../img/cabin02small.jpeg');
+    @include heroImage($green-gradient-transparent, '../img/domek03.jpg');
 }
 
 /*HEADER BLUE HOUSE*/
 .header-blue {
-    @include heroImage($blue-gradient-transparent, '../img/cabin01small.jpg');
+    @include heroImage($blue-gradient-transparent, '../img/domek04.jpeg');
 }
 
 /*HEADERS OFFERS */
